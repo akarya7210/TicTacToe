@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Lato&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    height: 50px;
+    background-color: rgb(194, 164, 182);
+    display: flex;
+    align-items: center;
+    color: whitesmoke;
+    padding: 0 12px;
+    font-family: 'Dosis', sans-serif;
+    font-size: 25px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+.gamecontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    font-family: 'Dosis', sans-serif;
+    
+}
+.line{
+    background-color: black;
+    height: 2px;
+    width: 0;
+    position: absolute;
+    transition: width 1s ease-in-out;
+    background-color: rgb(238, 116, 155);
+
+    
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 12vw);
+    grid-template-rows: repeat(3, 12vw);
+    margin-left: 13vw;
+    position: relative;
+}
+
+.box {
+    border: 1px solid black;
+    font-size: 10vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box:hover {
+    background-color: rgb(232, 232, 197);
+    cursor: pointer;
+}
+
+.part1 {
+    padding: 0 34px;
+    font-family: 'Lato', sans-serif;
+}
+
+.dancing img {
+    width: 0;
+    transition: width 1s ease-in-out;
+    padding-left: 20px;
+}
+
+.bl0 {
+    border-left: 0;
+}
+
+.br0 {
+    border-right: 0;
+}
+
+.bt0 {
+    border-top: 0;
+}
+
+.bb0 {
+    border-bottom: 0;
+}
+
+#reset {
+    padding: 0 11px;
+    margin: 0 158px;
+    background-color: black;
+    color: white;
+    border-radius: 9px;
+    cursor: pointer;
+    font-family: 'Dosis', sans-serif;
+    
+    
+}
+@media screen and (max-width: 600px) {
+    .gamecontainer{
+        flex-wrap: wrap;
+    }
+    .part1{
+        margin: 31px;
+        padding-left: 100px;
+    }
+    .part1 h1{
+        font-size: 1rem;
+    }
+    .container{
+        grid-template-columns: repeat(3, 16vw);
+    grid-template-rows: repeat(3, 16vw);
+    }
+    
+}
